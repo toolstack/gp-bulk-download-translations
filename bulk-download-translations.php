@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: GlotPress Bulk Download Translations
+Plugin Name: GP Bulk Download Translations
 Plugin URI: http://glot-o-matic.com/gp-bulk-download-translations
 Description: Download all the translation sets of a GlotPress project in a zip file at once.
 Version: 0.5
@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 class GP_Bulk_Download_Translations {
-	public $id = 'bulk-download-translations';
+	public $id = 'gp-bulk-download-translations';
 
 	public function __construct() {
 		// We need the Zip class to do the bulk export, if it doesn't exist, don't bother enabling the plugin.
@@ -139,7 +139,7 @@ class GP_Bulk_Download_Translations {
 		$locale = GP_Locales::by_slug( $locale_slug );
 		
 		// Apply any filters that other plugins may have implemented.
-		$export_locale = apply_filters( 'export_locale', $locale->slug, $locale );
+		$export_locale = apply_filters( 'gp_export_locale', $locale->slug, $locale );
 		
 		// Get the format object to create the export with.
 		$format_obj = gp_array_get( GP::$formats, gp_get( 'format', $format ), null );
@@ -148,7 +148,7 @@ class GP_Bulk_Download_Translations {
 		$filename = sprintf( '%s-%s.'.$format_obj->extension, str_replace( '/', '-', $project->path ), $export_locale );
 
 		// Apply any filters that other plugins may have implemented to the filename.
-		$filename = apply_filters( 'export_filename', $filename, $project->path, $set->slug, $export_locale, $format_obj->extension );
+		$filename = apply_filters( 'gp_export_translations_filename', $filename, $format_obj, $export_locale, $project, $set );
 
 		// Get the contents from the formatter.
 		$contents = $format_obj->print_exported_file( $project, $locale, $set, $entries );
