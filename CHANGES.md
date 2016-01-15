@@ -1,5 +1,5 @@
 ## 0.6
-* Release date: TBD
+* Release date: January 15, 2016
 * Fixed use of filter for file names.
 
 ## 0.5
