@@ -80,7 +80,7 @@ class GP_Bulk_Download_Translations {
 			// Loop through all the formats we're exporting
 			foreach( $include_formats as $format ) {
 				// Export the PO file for this translation set.
-				$files[] .= $this->_export_to_file( $format, $temp_dir, $project_obj, $locale, $set );
+				$files[] .= $this->export_to_file( $format, $temp_dir, $project_obj, $locale, $set );
 			}
 		}
 		
@@ -128,7 +128,7 @@ class GP_Bulk_Download_Translations {
 		rmdir( $temp_dir );
 	}
 	
-	private function _export_to_file( $format, $dir, $project, $locale, $set ) {
+	public function export_to_file( $format, $dir, $project, $locale, $set ) {
 		// Get the entries we going to export.
 		$entries = GP::$translation->for_export( $project, $set );
 		
