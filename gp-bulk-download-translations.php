@@ -148,7 +148,7 @@ class GP_Bulk_Download_Translations {
 		$filename = sprintf( '%s-%s.'.$format_obj->extension, str_replace( '/', '-', $project->path ), $export_locale );
 
 		// Apply any filters that other plugins may have implemented to the filename.
-		$filename = apply_filters( 'gp_export_translations_filename', $filename, $format_obj, $export_locale, $project, $set );
+		$filename = apply_filters( 'gp_export_translations_filename', $filename, $format_obj, $locale, $project, $set );
 
 		// Get the contents from the formatter.
 		$contents = $format_obj->print_exported_file( $project, $locale, $set, $entries );
