@@ -128,7 +128,7 @@ class GP_Bulk_Download_Translations {
 			// Loop through all the formats we're exporting
 			foreach( $include_formats as $format ) {
 				// Export the PO file for this translation set.
-				$files[] .= $this->_export_to_file( $format, $path, $project, $locale, $set );
+				$files[] .= $this->_export_to_file( $format, $path, $project, $set->locale, $set );
 			}
 		}
 
