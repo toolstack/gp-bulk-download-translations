@@ -3,7 +3,7 @@
 Plugin Name: GP Bulk Download Translations
 Plugin URI: http://glot-o-matic.com/gp-bulk-download-translations
 Description: Download all the translation sets of a GlotPress project in a zip file at once.
-Version: 1.0
+Version: 1.1
 Author: Greg Ross
 Author URI: http://toolstack.com
 Tags: glotpress, glotpress plugin
