@@ -1,3 +1,7 @@
+## 1.x
+* Release date: xx
+* PHP 8.1 compatibility with not dynamically creating variables
+
 ## 1.1
 * Release date: June 20, 2016
 * Renamed main plugin file.
