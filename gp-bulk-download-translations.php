@@ -13,6 +13,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 class GP_Bulk_Download_Translations {
 	public $id = 'gp-bulk-download-translations';
+	public $api;
+	public $last_method_called;
+	public $class_name;
+	public $request_running;
 
 	public function __construct() {
 		// We need the Zip class to do the bulk export, if it doesn't exist, don't bother enabling the plugin.
