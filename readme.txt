@@ -45,7 +45,7 @@ TBD
 == Changelog ==
 = 1.2 =
 * Release date: November 11, 2024
-* PHP 8.1 compatibility with not dynamically creating variables
+* PHP 8.1 compatibility with not dynamically creating variables, thanks @afragen.
 
 = 1.1 =
 * Release date: June 20, 2016
