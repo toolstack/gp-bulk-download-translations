@@ -3,7 +3,7 @@
 Plugin Name: GP Bulk Download Translations
 Plugin URI: http://glot-o-matic.com/gp-bulk-download-translations
 Description: Download all the translation sets of a GlotPress project in a zip file at once.
-Version: 1.1
+Version: 1.2
 Author: Greg Ross
 Author URI: http://toolstack.com
 Tags: glotpress, glotpress plugin
@@ -70,7 +70,7 @@ class GP_Bulk_Download_Translations {
 
 		// Create the new archive.
 		$zip = new ZipArchive;
-		
+
 		if ( $zip->open( $zip_file, ZipArchive::CREATE ) === TRUE ) {
 			// Loop through all of the files we created and add them to the zip file.
 			foreach( $files as $file ) {
